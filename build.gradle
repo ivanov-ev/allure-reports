@@ -1,0 +1,52 @@
+plugins {
+    id 'java-library'
+    id 'io.qameta.allure' version "2.11.2"
+}
+
+group = 'ru.example'
+version = '1.0-SNAPSHOT'
+
+allure {
+    report { //секция репорта
+        version.set("2.27.0") //версия allure framework
+    }
+    adapter { //отвечает за появление папки// build/allure-results
+        //aspectjWeaver.set(true)
+        frameworks {
+            junit5 { // название фрейморка
+                adapterVersion.set("2.27.0") // версия интеграции фреймоврка и аллюр
+            }
+        }
+    }
+}
+
+
+// https://mvnrepository.com/
+repositories {
+    mavenCentral()
+}
+
+
+compileJava {
+    options.encoding = 'UTF-8'
+}
+
+compileTestJava {
+    options.encoding = 'UTF-8'
+}
+
+
+dependencies {
+    testImplementation (
+            "org.junit.jupiter:junit-jupiter:5.10.0",
+            "com.codeborne:selenide:7.2.0",
+            "org.slf4j:slf4j-simple:2.0.7",
+            "io.qameta.allure:allure-selenide:2.19.0",
+            "org.aspectj:aspectjweaver:1.9.22"
+    )
+}
+
+test {
+    //Junit5
+    useJUnitPlatform()
+}
