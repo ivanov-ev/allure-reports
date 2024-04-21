@@ -15,6 +15,7 @@ import static io.qameta.allure.Allure.attachment;
 import static io.qameta.allure.Allure.step;
 import static org.openqa.selenium.By.linkText;
 
+@DisplayName("Allure Report demo using Lambda Steps")
 public class AllureReportDemoUsingLambdaStepsTest extends TestBase {
 
     private final String searchQuery = "Selenide",

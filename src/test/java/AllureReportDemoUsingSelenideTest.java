@@ -11,6 +11,7 @@ import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Selenide.$;
 import static org.openqa.selenium.By.linkText;
 
+@DisplayName("Allure Report demo using Selenide")
 public class AllureReportDemoUsingSelenideTest extends TestBase {
 
     private final String searchQuery = "Selenide",

@@ -2,6 +2,7 @@ import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+@DisplayName("Allure Report demo using annotated steps")
 public class AllureReportDemoUsingAnnotatedStepsTest extends TestBase {
 
     private final String searchQuery = "Selenide",
